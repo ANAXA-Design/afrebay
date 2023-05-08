@@ -19177,3 +19177,11 @@ footer .bottom-line span {
 footer .social {
    margin-top: 0 !important;
 }
+
+
+.showsticky, .hidesticky {
+    width: 258px;
+    height: auto;
+    background-repeat: no-repeat;
+    object-fit: cover;
+}

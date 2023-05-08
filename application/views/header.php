@@ -120,6 +120,30 @@ $get_category=$this->Crud_model->GetData('category','',"status='Active'");
                             <img class="showsticky" src="<?=base_url(); ?>uploads/logo/<?= $get_setting->logo?>" alt="" />
                         </a>
                     </div>
+                    <div class="btn-extars">
+                        <?php if(!empty($_SESSION['afrebay']['userId'])){?>
+                        <a href="<?= base_url('postjob')?>" title="" class="post-job-btn"><i class="la la-plus"></i>Post Jobs</a>
+                        <?php } else{?>
+                            <a href="<?= base_url('login')?>" title="" class="post-job-btn"><i class="la la-plus"></i>Post Jobs</a>
+                        <?php } ?>
+                        <ul class="account-btns">
+                        <?php if(!empty($_SESSION['afrebay']['userId'])){?>
+                            <li class="">
+                                <a href="<?=base_url(); ?>dashboard"><i class="la la-key"></i> My Account</a>
+                            </li>
+                            <li class="">
+                                <a href="<?=base_url(); ?>logout"><i class="la la-external-link-square"></i> Logout</a>
+                            </li>
+                        <?php } else{?>
+                            <li class="">
+                                <a href="<?=base_url(); ?>register"><i class="la la-key"></i> Sign Up</a>
+                            </li>
+                            <li class="">
+                                <a href="<?=base_url(); ?>login"><i class="la la-external-link-square"></i> Login</a>
+                            </li>
+                        <?php } ?>
+                        </ul>
+                    </div>
                     <nav>
                         <ul>
                             <li class="menu-item-has-children">
@@ -152,30 +176,6 @@ $get_category=$this->Crud_model->GetData('category','',"status='Active'");
                             </li>
                         </ul>
                     </nav>
-                    <div class="btn-extars">
-                        <?php if(!empty($_SESSION['afrebay']['userId'])){?>
-                        <a href="<?= base_url('postjob')?>" title="" class="post-job-btn"><i class="la la-plus"></i>Post Jobs</a>
-                        <?php } else{?>
-                            <a href="<?= base_url('login')?>" title="" class="post-job-btn"><i class="la la-plus"></i>Post Jobs</a>
-                        <?php } ?>
-                        <ul class="account-btns">
-                        <?php if(!empty($_SESSION['afrebay']['userId'])){?>
-                            <li class="">
-                                <a href="<?=base_url(); ?>dashboard"><i class="la la-key"></i> My Account</a>
-                            </li>
-                            <li class="">
-                                <a href="<?=base_url(); ?>logout"><i class="la la-external-link-square"></i> Logout</a>
-                            </li>
-                        <?php } else{?>
-                            <li class="">
-                                <a href="<?=base_url(); ?>register"><i class="la la-key"></i> Sign Up</a>
-                            </li>
-                            <li class="">
-                                <a href="<?=base_url(); ?>login"><i class="la la-external-link-square"></i> Login</a>
-                            </li>
-                        <?php } ?>
-                        </ul>
-                    </div>
                 </div>
             </div>
         </header>
