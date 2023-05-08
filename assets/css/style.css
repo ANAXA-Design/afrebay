@@ -19179,9 +19179,16 @@ footer .social {
 }
 
 
-.showsticky, .hidesticky {
+.showsticky,
+.hidesticky {
     width: 258px;
     height: auto;
     background-repeat: no-repeat;
     object-fit: cover;
+}
+
+.Header_Menu_Nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
